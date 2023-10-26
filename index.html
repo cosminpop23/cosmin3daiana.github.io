@@ -1,75 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OnlyFans Chat Templates</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sexting Tool</title>
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: goldenrod;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: gold;
+        }
+
+        body {
+    background: linear-gradient(to bottom, #333333, silver);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    overflow-x: hidden; 
+    color: black;
+}
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .button-container button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, goldenrod, darkgoldenrod);
+            border: 2px solid gold;
+            border-radius: 20px;
+            color: black;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+
+        .button-container button:active {
+            transform: scale(0.95);
+        }
+
+        .output-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .output-box,
+        .support-output-box {
+            border: 2px solid goldenrod;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgba(255, 223, 0, 0.1);
+            overflow-y: scroll;
+            width: 300px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .output-box {
+            height: 250px;
+        }
+
+        .support-output-box {
+            height: 100px;
+        }
+
+        .copy-button {
+    margin-top: 30px;
+    padding: 2px 5px;
+    font-size: 12px;
+    background: linear-gradient(to bottom, #00ff00, #008000); /* Green gradient */
+    border: 1px solid silver;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.copy-button:hover {
+    background-color: rgba(43, 255, 0, 0.925);
+}
+
+        .copy-confirmation {
+            position: absolute;
+            background-color: rgba(0, 255, 64, 0.966);
+            color: black;
+            padding: 10px;
+            border-radius: 50%;
+            z-index: 1000;
+            border: 2px solid gold;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: white;
+        }
+
+        .section {
+    background-color: rgba(255, 223, 0, 0.1);
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    padding: 10px; 
+    margin-top: 5px;
+}
+
+
+
+.section h2 {
+    font-size: 18px; 
+}
+input[type="text"] {
+            width: 150px; 
+            padding: 10px;
+            margin-top: 10px;
+            border: 2px solid goldenrod;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9); 
+            color: black;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, goldenrod, darkgoldenrod);
+            border: 2px solid gold;
+            border-radius: 20px;
+            color: black;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+            color: white;
+        }
+
+    </style>
 </head>
+
 <body>
     <div class="container">
         <header>
-            <h1>OnlyFans Chat Templates</h1>
+            <h1>Sexting Tool</h1>
         </header>
-
-        <!-- Sexting Section -->
-        <div class="section">
-            <h2>Sexting</h2>
-            <input type="text" id="fan-name-sexting" placeholder="Enter fan's name">
-            <select id="sexting-category">
-                <option value="normal">Normal Sexting</option>
-                <option value="fetish-master">Fetish - Master</option>
-                <option value="fetish-mistress">Fetish - Mistress/Femdom</option>
-            </select>
-            <button id="sexting-button">Generate</button>
-            <p id="sexting-message"></p>
+          <!-- Sexting B Section -->
+        <div class="section" id="sexting-b-section">
+            <h2>Sexting - Blowjob</h2>
+            <input type="text" id="fan-name-sexting-b" placeholder="Enter fan's name">
+            <button id="sexting-b-button">Generate</button>
+            <p id="sexting-b-message"></p>
             <!-- Add a Copy button -->
-            <button id="copy-sexting">Copy</button>
+            <button id="copy-sexting-b">Copy</button>
         </div>
 
-        <!-- Welcome To My Page Messages Section -->
-<div class="section">
-    <h2>Welcome To My Page Messages</h2>
-    <input type="text" id="fan-name-welcome" placeholder="Enter fan's name">
-    <button id="welcome-button">Generate</button>
-    <p id="welcome-message"></p>
+        <!-- Sexting P Section -->
+        <div class="section" id="sexting-p-section">
+            <h2>Sexting - Pussy</h2>
+            <input type="text" id="fan-name-sexting-p" placeholder="Enter fan's name">
+            <button id="sexting-p-button">Generate</button>
+            <p id="sexting-p-message"></p>
+            <!-- Add a Copy button -->
+            <button id="copy-sexting-p">Copy</button>
+        </div>
+<!-- Sexting A Section -->
+<div class="section" id="sexting-a-section">
+    <h2>Sexting - Ass</h2>
+    <input type="text" id="fan-name-sexting-a" placeholder="Enter fan's name">
+    <button id="sexting-a-button">Generate</button>
+    <p id="sexting-a-message"></p>
     <!-- Add a Copy button -->
-    <button id="copy-welcome">Copy</button>
-
-    <!-- Storylines Section -->
-    <div class="section">
-        <h2>Storylines</h2>
-        <input type="text" id="model-name" placeholder="Enter model's name">
-        <button id="story-button">Give Me The Story</button>
-        <p id="story-message"></p>
-        <!-- Add a Copy button -->
-        <button id="copy-story">Copy</button>
-
-<script src="script.js"></script>
-
-        <!-- Love Messages Section -->
-        <div class="section">
-            <h2>Love Messages</h2>
-            <input type="text" id="fan-name-love" placeholder="Enter fan's name">
-            <button id="love-button">Generate</button>
-            <p id="love-message"></p>
+    <button id="copy-sexting-a">Copy</button>
+</div>
+        <!-- Sexting C Section -->
+        <div class="section" id="sexting-c-section">
+            <h2>Sexting - Cum</h2>
+            <input type="text" id="fan-name-sexting-c" placeholder="Enter fan's name">
+            <select id="sexting-c-dropdown">
+                <option value="1">Facial</option>
+                <option value="2">Mouth/Throat</option>
+                <option value="3">Tits</option>
+                <option value="4">Ass/Creampie-Ass</option>
+                <option value="5">Pussy/Creampie-Pussy</option>
+            </select>
+            <button id="sexting-c-button">Generate</button>
+            <p id="sexting-c-message"></p>
             <!-- Add a Copy button -->
-            <button id="copy-love">Copy</button>
-        </div>
-
-        <!-- Love Messages for Offline Fans Section -->
-        <div class="section">
-            <h2>Love Messages for Offline Fans</h2>
-            <input type="text" id="fan-name-offline-love" placeholder="Enter fan's name">
-            <button id="offline-love-button">Generate</button>
-            <p id="offline-love-message"></p>
-            <!-- Add a Copy button -->
-            <button id="copy-offline-love">Copy</button>
-        </div>
-
+            <button id="copy-sexting-c">Copy</button>
         </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>

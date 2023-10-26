@@ -1,18 +1,109 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: goldenrod;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: gold;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #000000, #ffffff); /* Background gradient from black to white */
-    color: #333;
-    margin: 0;
-    padding: 0;
+background: linear-gradient(to bottom, #333333, silver);
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 0;
+overflow-x: hidden; 
+color: black;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.button-container button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, goldenrod, darkgoldenrod);
+    border: 2px solid gold;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.button-container button:active {
+    transform: scale(0.95);
+}
+
+.output-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px;
+}
+
+.output-box,
+.support-output-box {
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 223, 0, 0.1);
+    overflow-y: scroll;
+    width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.output-box {
+    height: 250px;
+}
+
+.support-output-box {
+    height: 100px;
+}
+
+.copy-button {
+margin-top: 30px;
+padding: 2px 5px;
+font-size: 12px;
+background: linear-gradient(to bottom, #00ff00, #008000); /* Green gradient */
+border: 1px solid silver;
+color: black;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.copy-button:hover {
+background-color: rgba(0, 255, 0, 0.904);
+}
+
+.copy-confirmation {
+    position: absolute;
+    background-color: rgba(43, 255, 0, 0.7);
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+    border: 2px solid gold;
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
 }
 
 header {
@@ -21,67 +112,50 @@ header {
 }
 
 h1 {
-    font-size: 28px;
-    color: #333;
+    font-size: 36px;
+    color: white;
 }
 
 .section {
-    margin-bottom: 30px;
+background-color: rgba(255, 223, 0, 0.1);
+border: 2px solid goldenrod;
+border-radius: 10px;
+padding: 10px; 
+margin-top: 5px;
 }
 
-h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
 
-input[type="text"],
-select {
-    width: 100%;
+
+.section h2 {
+font-size: 18px; 
+}
+input[type="text"] {
+    width: 150px; 
     padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    margin-top: 10px;
+    border: 2px solid goldenrod;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: black;
 }
 
 button {
-    background-color: #3498db; /* Blue button */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
     font-size: 18px;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, goldenrod, darkgoldenrod);
+    border: 2px solid gold;
+    border-radius: 20px;
+    color: black;
     cursor: pointer;
-    border-radius: 5px;
+    transition: transform 0.1s ease;
 }
 
-button:hover {
-    background-color: #2980b9; /* Darker blue on hover */
+button:active {
+    transform: scale(0.95);
 }
 
 p {
-    font-size: 16px;
     margin-top: 10px;
-}
-
-/* Add styling for Copy buttons */
-button#copy-sexting,
-button#copy-love,
-button#copy-offline-love,
-button#copy-welcome,
-button#copy-story,
-button#copy-love-pic {
-    background-color: #27ae60; /* Green button */
-    color: white; /* White text color */
-    border: none; /* No border */
-    padding: 10px 20px; /* Padding for button */
-    cursor: pointer; /* Show pointer cursor on hover */
-    margin-left: 10px; /* Add some spacing */
-}
-
-button#copy-sexting:hover,
-button#copy-love:hover,
-button#copy-offline-love:hover,
-button#copy-welcome:hover,
-button#copy-story:hover,
-button#copy-love-pic:hover {
-    background-color: #219c54; /* Darker green on hover */
+    font-size: 18px;
+    color: white;
 }
